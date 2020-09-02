@@ -17,3 +17,9 @@ const pokemonArrayHTML = (arr) => {
    return arr.map(p => pokemonHTML(p)).join('')
 }
 
+const handleSearch = (e, pokemon, container) => {
+    const query = e.target.value
+    const pokeArr = pokemon.filter( p => p.name.toLowerCase().includes(query) )
+    container.innerHTML = pokemonArrHTML(pokeArr)
+}
+
