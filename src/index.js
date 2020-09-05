@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
         container.innerHTML = pokemonArrayHTML(json)
     })
     searchForm.addEventListener('input', e => handleSearch(e, memoizedPokemon, container))
+    container.addEventListener('click', e => handleClick(e, memoizedPokemon ))
 })
 
 

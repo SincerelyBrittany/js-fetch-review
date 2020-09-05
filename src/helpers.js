@@ -24,3 +24,16 @@ const handleSearch = (e, pokemon, container) => {
     container.innerHTML = pokemonArrayHTML(pokeArr)
 }
 
+const handleClick = (e, pokemon) => {
+    switch( e.target.dataset.action ){
+        case "flip":
+            console.log("FLIP")
+            const id = parseInt(e.target.dataset.id)
+            const poke = pokemon.find(p => p.id === id )
+            e.target.src = (e.target.src === poke.sprites.front) ? poke.sprites.back : poke.sprites.front
+            break
+        default:
+            
+    }
+}
+
