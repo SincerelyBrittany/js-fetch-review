@@ -18,8 +18,9 @@ const pokemonArrayHTML = (arr) => {
 }
 
 const handleSearch = (e, pokemon, container) => {
+    console.log("here")
     const query = e.target.value
     const pokeArr = pokemon.filter( p => p.name.toLowerCase().includes(query) )
-    container.innerHTML = pokemonArrHTML(pokeArr)
+    container.innerHTML = pokemonArrayHTML(pokeArr)
 }
 
